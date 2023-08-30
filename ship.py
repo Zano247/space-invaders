@@ -1,11 +1,13 @@
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
 
     def __init__(self, ai_settings, screen):
         """Inicializa a espaconave e define sua posicao inicial"""
         self.screen = screen
         self.ai_settings = ai_settings
+        super(Ship, self).__init__()
 
         #Carrega a imagem da espaconave e obtem seu rect
         self.image = pygame.image.load('Imagens/ship.bmp')
